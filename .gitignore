@@ -1,3 +1,14 @@
+*.iml
+.gradle
+/.idea/
+.DS_Store
+*/build
+*/src/androidTest
+*/src/test
+/captures
+.externalNativeBuild
+.cxx
+
 # Built application files
 *.apk
 *.aar
@@ -83,3 +94,4 @@ lint/generated/
 lint/outputs/
 lint/tmp/
 # lint/reports/
+

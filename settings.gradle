@@ -1,0 +1,4 @@
+include ':netbasic'
+include ':androidbasic'
+include ':app'
+rootProject.name = "AndroidBasicFramework"
