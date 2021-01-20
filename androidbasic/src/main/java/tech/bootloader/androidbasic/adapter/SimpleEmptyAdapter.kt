@@ -23,7 +23,8 @@ class SimpleEmptyAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         context = parent.context
-
+//        val binding = ItemHomeFunctionBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+//        val view= binding.root
         val view = LayoutInflater.from(context).inflate(this.resource, parent, false)
         val holder = ViewHolder(view)
 

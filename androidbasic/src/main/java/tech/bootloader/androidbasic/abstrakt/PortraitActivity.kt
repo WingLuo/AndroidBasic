@@ -3,15 +3,16 @@ package tech.bootloader.androidbasic.abstrakt
 
 import android.content.Context
 import android.content.pm.ActivityInfo
+import android.os.Build
 import android.os.Bundle
 import android.os.IBinder
 import android.view.MotionEvent
 import android.view.View
+import android.view.WindowInsetsController
 import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import tech.bootloader.androidbasic.InterfaceInitializationView
-import tech.bootloader.androidbasic.abstrakt.BaseActivity
 
 
 /**
@@ -31,6 +32,19 @@ abstract class PortraitActivity : BaseActivity(), InterfaceInitializationView {
 //            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
 //            window.statusBarColor = Color.TRANSPARENT
 //        }
+
+
+//        if (Build.VERSION.SDK_INT < 30) {
+            window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
+//        } else {
+//           window.setDecorFitsSystemWindows(false)
+//            val controller = window.insetsController
+//            controller?.setSystemBarsAppearance(
+//                WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS,
+//                WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS
+//            )
+//        }
+
 
         window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
 
